@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script defer src="./js/shape.js"></script>
+        <script defer src="./js/app.js"></script>
+        <script defer src="./js/resource.js"></script>
+    </head>
+    <body>
+    <p>Q1: Create a shape class with name, sides properties with a constructor to assign the values to them.
+        Add a method getShape to get the shape info.
+        Create a child class circle/rectangle from the shape class, the child class should contain new properties, a new method to calculate the area. Set properties of the parent class from the child constructor.
+    </p>
+    <br>
+    <p>We create a new shape from the parent class</p>
+    <p id="newShapeGenerator"></p>
+    <p>We create a new shape from the child class Circle</p>
+    <p id = "newCircle"></p>
+    <p>We calculated the new circle area</p>
+    <p id = "circleRadius"></p>
+    <p>We create a new shape from the child class Rectangle</p>
+    <p id="newRectangle"></p>
+    <p>We calculated the new rectangle Area</p>
+    <p id = "rectangleArea"></p>
+    <p>Q2: Write an async function to call an external API.
+        The function should return a mapped response with just id, name & email. (Use fetch API to call the External resource)
+        Add error handling using try-catch as well.
+        ss from the child constructor.
+    </p>
+    <h1>Get users randomly from API</h1>
+   
+    <div class="container">
+        <p>Name:<p id= "name"></p></p>
+        <p>Email:<p id= "email"></p></p>
+        <p>Id:<p id= "id"></p></p>
+    </div>
+    <button>Get Content</button>
+    <h1>Get full response from parent function class</h1>
+    <p id = "fullResponse"></p>
+    <h1>Get all response filtered by id, name, email</h1>
+    <div id="box">
+    </div>
+</body>
+</html>
