@@ -7,7 +7,7 @@ class resourceCaller {
         return this._url;
     }
 
-    loadFromApi () {
+    loadAllFromApi () {
         console.log(fetch(this.Url)
         .then((response) => {   
           return response.text()
@@ -30,7 +30,7 @@ class childCaller extends resourceCaller {
         super(url)
     }
 
-    loadFromApi () {
+    loadMappedFromApi () {
         console.log(fetch(this.Url)
         .then((response) => {   
           return response.json()
@@ -44,7 +44,6 @@ class childCaller extends resourceCaller {
 
     showAllUserData (users) {
     let length = users.data.length;
-    let para = document.createElement("p");
         for (let i = 0; i < length; i++){
             appendParagraph(`Name: ${users.data[i].first_name} ${users.data[i].last_name}`, "box")
             appendParagraph(`Email: ${users.data[i].email}`, "box")
@@ -60,7 +59,6 @@ function appendParagraph(text, div) {
     document.getElementById(`${div}`).appendChild(para);
 }
 
-const reasourceC = new resourceCaller('https://reqres.in/api/users');
-reasourceC.loadFromApi();
 const resourceChild = new childCaller('https://reqres.in/api/users');
-resourceChild.loadFromApi();
+resourceChild.loadAllFromApi();
+resourceChild.loadMappedFromApi();
